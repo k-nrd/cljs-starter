@@ -8,5 +8,7 @@ Hopefully this saves me some time in the future, and if it saves someone else's 
 
 You'll notice I added devtools and malli as a dependency. Devtools is basically self-explanatory; I use malli by default because my TypeScript brain can't handle not knowing the shape of things.
 
-### Note to self
+<sub><sup>
+Note to self
 If my future self reads this, remember you're a stupid bloke that can't use most Clojure libs, so just pull those npm libraries and use them directly - it should save some precious brain-CPU cycles.
+</sup></sub>
