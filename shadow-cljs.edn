@@ -15,7 +15,10 @@
                            :output-feature-set :es6}
         :output-dir "public/js/compiled"
         :asset-path "/js/compiled"
-        :modules {:main {:init-fn app-name.core/init}}
+        :modules {:main {:entries [app-name.core]
+                         :init-fn app-name.core/init
+                         :preloads [app-name.preload
+                                    malli.dev.cljs-kondo-preload]}}
         :devtools
         {:before-load app-name.core/stop
          :after-load app-name.core/start
