@@ -1,0 +1,20 @@
+{:source-paths
+ ["src"]
+
+ :dependencies [[metosin/malli "0.11.0"]
+
+                [binaryage/devtools "1.0.7"]]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js/compiled"
+        :asset-path "/js/compiled"
+        :modules {:main {:init-fn [app.core/main]}}
+        :devtools
+        {:before-load app.core/stop
+         :after-load app.core/start
+         :http-root "public"
+         :http-port 8000
+         :preloads [devtools.preload]}}}}
+
+
