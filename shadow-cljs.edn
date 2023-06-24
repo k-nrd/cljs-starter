@@ -5,16 +5,20 @@
 
                 [binaryage/devtools "1.0.7"]]
 
+ :dev-http
+ {8000 "public"}
+
  :builds
  {:app {:target :browser
+        :js-options {:entry-keys ["module" "browser" "main"]}
+        :compiler-options {:infer-externs :auto
+                           :output-feature-set :es6}
         :output-dir "public/js/compiled"
         :asset-path "/js/compiled"
-        :modules {:main {:init-fn [app.core/main]}}
+        :modules {:main {:init-fn app-name.core/init}}
         :devtools
-        {:before-load app.core/stop
-         :after-load app.core/start
-         :http-root "public"
-         :http-port 8000
+        {:before-load app-name.core/stop
+         :after-load app-name.core/start
          :preloads [devtools.preload]}}}}
 
 

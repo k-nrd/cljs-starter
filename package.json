@@ -1,9 +1,14 @@
 {
-  "name": "journey-cljs",
+  "name": "app-name",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "cljs": "shadow-cljs"
+    "cljs": "shadow-cljs",
+    "dev": "shadow-cljs watch app",
+    "build": "shadow-cljs compile app",
+    "repl:browser": "shadow-cljs browser-repl app",
+    "repl:cljs": "shadow-cljs cljs-repl app",
+    "repl:node": "shadow-cljs node-repl app"
   },
   "devDependencies": {
     "shadow-cljs": "2.24.0"
